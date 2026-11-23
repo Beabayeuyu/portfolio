@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="id" data-lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#05070F">
+<meta name="color-scheme" content="dark">
+<title>M. Bayu Adi Putra — Technical Operations &amp; Project Manager</title>
+<meta name="description" content="Portfolio M. Bayu Adi Putra — Technical Operations, Project Manager, dan Scrum Master dengan 16+ tahun pengalaman di industri teknologi.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="M. Bayu Adi Putra — Technical Operations &amp; Project Manager">
+<meta property="og:description" content="16+ tahun di persimpangan operasional dan produk: POS, e-commerce, CMS, Kubernetes, dan Scrum.">
+<meta property="og:image" content="assets/img/photo.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232DE2F2'/%3E%3Cstop offset='1' stop-color='%237C5CFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230A0E18'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='23' font-weight='700' fill='url(%23g)' text-anchor='middle'%3EMB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --bg:#05070F; --bg2:#080B18;
+  --panel:rgba(255,255,255,.04);
+  --line:rgba(255,255,255,.085);
+  --txt:#EDF1FA; --muted:#9AA7BE;
+  --cyan:#2DE2F2; --cyan2:#7CF0FF;
+  --violet:#7C5CFF; --violet2:#B58CFF; --fuchsia:#E879F9;
+  --font:'Space Grotesk',system-ui,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'Cascadia Code',monospace;
+  --r:18px; --ease:cubic-bezier(.2,.7,.2,1);
+}
+/* ================= RESET ================= */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul{margin:0;padding:0;list-style:none}
+svg{display:block;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:8px}
+::selection{background:rgba(45,226,242,.28);color:#fff}
+.skip{position:fixed;left:16px;top:-64px;z-index:99;padding:10px 16px;border-radius:10px;background:#0B1222;border:1px solid var(--line);font-size:.85rem;transition:top .2s var(--ease)}
+.skip:focus{top:14px}
+/* ================= BACKGROUND ================= */
+.bg-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:-3;opacity:.8;pointer-events:none}
+body::before{content:'';position:fixed;inset:0;z-index:-4;pointer-events:none;
+  background:
+    radial-gradient(60% 50% at 12% 6%,rgba(45,226,242,.14),transparent 62%),
+    radial-gradient(56% 46% at 88% 20%,rgba(124,92,255,.16),transparent 64%),
+    radial-gradient(60% 50% at 50% 104%,rgba(45,226,242,.08),transparent 70%),
+    linear-gradient(#05070F,#04060D)}
+body::after{content:'';position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.55;
+  background-image:
+    linear-gradient(rgba(120,160,200,.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(120,160,200,.06) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(72% 60% at 50% 26%,#000 18%,transparent 86%);
+  mask-image:radial-gradient(72% 60% at 50% 26%,#000 18%,transparent 86%)}
+.noise{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+.glow{position:fixed;left:0;top:0;width:560px;height:560px;margin:-280px 0 0 -280px;border-radius:50%;z-index:0;pointer-events:none;opacity:0;transition:opacity .5s;
+  background:radial-gradient(circle,rgba(45,226,242,.14),rgba(124,92,255,.1) 42%,transparent 68%);
+  filter:blur(18px);will-change:transform}
+@media (pointer:coarse){.glow{display:none}}
+/* ================= LAYOUT ================= */
+.wrap{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+section{position:relative;padding:clamp(64px,9vw,116px) 0}
+/* ================= PROGRESS ================= */
+.progress{position:fixed;inset:0 0 auto;height:2px;z-index:80;background:rgba(255,255,255,.04)}
+.progress span{display:block;height:100%;width:100%;transform:scaleX(0);transform-origin:0 50%;
+  background:linear-gradient(90deg,var(--cyan),var(--violet) 62%,var(--fuchsia));box-shadow:0 0 12px rgba(45,226,242,.85)}
+/* ================= NAV ================= */
+.nav{position:fixed;inset:0 0 auto;z-index:70;padding:14px 0;border-bottom:1px solid transparent;
+  transition:background .3s,border-color .3s,padding .3s}
+.nav.scrolled{padding:9px 0;background:rgba(5,7,15,.74);border-bottom-color:var(--line);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.95rem;letter-spacing:.01em}
+.brand-mark{position:relative;width:38px;height:38px;flex:none;display:grid;place-items:center;border-radius:11px;
+  background:#0A0F1E;font-family:var(--mono);font-size:.76rem;color:#DAFBFF;letter-spacing:.04em}
+.brand-mark::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;
+  background:linear-gradient(150deg,rgba(124,240,255,.9),rgba(255,255,255,.06) 45%,rgba(124,92,255,.85));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.brand-mark::after{content:'';position:absolute;inset:0;border-radius:inherit;
+  box-shadow:0 0 26px rgba(45,226,242,.22),inset 0 0 16px rgba(45,226,242,.1);pointer-events:none}
+.brand-text small{display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);line-height:1.5}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{position:relative;padding:8px 11px;border-radius:9px;font-size:.84rem;color:var(--muted);transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--txt);background:rgba(255,255,255,.04)}
+.nav-links a.active{color:#E4FCFF}
+.nav-links a.active::after{content:'';position:absolute;left:11px;right:11px;bottom:3px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--cyan2),transparent);box-shadow:0 0 8px var(--cyan)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang{display:flex;gap:3px;padding:3px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03)}
+.lang button{padding:4px 9px;border-radius:999px;font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;color:var(--muted);transition:.2s}
+.lang button.active{color:#F0FDFF;background:linear-gradient(135deg,rgba(45,226,242,.22),rgba(124,92,255,.28));box-shadow:0 0 14px rgba(45,226,242,.2)}
+.burger{display:none;position:relative;width:42px;height:42px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.03)}
+.burger i{position:absolute;left:11px;right:11px;height:1.6px;background:#E2E9F6;border-radius:2px;transition:transform .25s var(--ease),opacity .2s}
+.burger i:nth-child(1){top:15px}.burger i:nth-child(2){top:20px}.burger i:nth-child(3){top:25px}
+html.menu-open .burger i:nth-child(1){transform:translateY(5px) rotate(45deg)}
+html.menu-open .burger i:nth-child(2){opacity:0}
+html.menu-open .burger i:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+/* ================= MOBILE SHEET ================= */
+.sheet{position:fixed;inset:0;z-index:65;display:flex;flex-direction:column;justify-content:center;
+  padding:94px 26px 40px;background:rgba(4,5,12,.95);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+html.menu-open .sheet{opacity:1;visibility:visible}
+.sheet-nav a{display:flex;align-items:baseline;gap:14px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.055);
+  font-size:clamp(1.3rem,6vw,1.85rem);font-weight:600;letter-spacing:-.02em;color:#E2E9F6;
+  transform:translateY(14px);opacity:0;transition:transform .4s var(--ease),opacity .4s var(--ease)}
+html.menu-open .sheet-nav a{transform:none;opacity:1}
+.sheet-nav a em{font-family:var(--mono);font-style:normal;font-size:.6rem;letter-spacing:.14em;color:var(--cyan)}
+.sheet-nav a:nth-child(1){transition-delay:.05s}
+.sheet-nav a:nth-child(2){transition-delay:.09s}
+.sheet-nav a:nth-child(3){transition-delay:.13s}
+.sheet-nav a:nth-child(4){transition-delay:.17s}
+.sheet-nav a:nth-child(5){transition-delay:.21s}
+.sheet-nav a:nth-child(6){transition-delay:.25s}
+.sheet-nav a:nth-child(7){transition-delay:.29s}
+.sheet-foot{margin-top:26px;display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--mono);font-size:.7rem;color:var(--muted)}
+.sheet-foot a{color:#C2EEFA}
+/* ================= HERO ================= */
+.hero{min-height:100svh;display:flex;align-items:center;padding-top:118px;padding-bottom:76px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:clamp(30px,5vw,66px);align-items:center;width:min(1180px,calc(100% - 44px));margin-inline:auto}
+.pill{display:inline-flex;align-items:center;gap:9px;padding:6px 13px 6px 10px;border-radius:999px;
+  border:1px solid rgba(124,240,255,.22);background:rgba(45,226,242,.06);
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:#C8FAFF}
+.pill i{width:7px;height:7px;border-radius:50%;background:#34D399;box-shadow:0 0 10px #34D399;animation:pulse 2.2s var(--ease) infinite}
+h1{margin:16px 0 0;font-size:clamp(2.4rem,6.2vw,4.5rem);line-height:1.03;letter-spacing:-.038em;font-weight:700}
+.hero-greet{display:block;font-family:var(--mono);font-size:clamp(.7rem,1.5vw,.84rem);letter-spacing:.22em;
+  text-transform:uppercase;color:var(--muted);font-weight:400;margin-bottom:12px}
+.grad{background:linear-gradient(100deg,#F0FDFF,#7CF0FF 30%,#B58CFF 62%,#E879F9 86%,#F0FDFF);
+  background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:sheen 10s ease-in-out infinite}
+.typed-line{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:18px 0 0;
+  font-family:var(--mono);font-size:clamp(.76rem,1.5vw,.94rem);color:#8496AE;min-height:1.7em}
+.typed-prefix{color:#54707F}
+.typed{color:#D4FBFF}
+.caret{display:inline-block;width:8px;height:1.05em;background:var(--cyan);box-shadow:0 0 10px var(--cyan);
+  transform:translateY(2px);animation:blink 1.05s steps(2,start) infinite}
+.hero-desc{max-width:54ch;margin:20px 0 0;color:var(--muted);font-size:clamp(.92rem,1.6vw,1.02rem)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 21px;border-radius:12px;
+  font-size:.9rem;font-weight:600;letter-spacing:.01em;transition:transform .25s var(--ease),box-shadow .25s,background .25s,border-color .25s}
+.btn svg{width:17px;height:17px}
+.btn-primary{background:linear-gradient(120deg,#2DE2F2,#7C5CFF 58%,#C05CFF);color:#04121C;box-shadow:0 12px 34px -12px rgba(45,226,242,.75)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 42px -12px rgba(124,92,255,.85)}
+.btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.03);color:#E2E9F6;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.btn-ghost:hover{transform:translateY(-2px);border-color:rgba(124,240,255,.4);background:rgba(45,226,242,.07)}
+.stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:38px;padding-top:24px;border-top:1px solid var(--line)}
+.stat b{display:block;font-size:clamp(1.45rem,3vw,1.95rem);font-weight:700;letter-spacing:-.025em;
+  background:linear-gradient(120deg,#F0FDFF,#7CF0FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-family:var(--mono);font-size:.59rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.hero-media{position:relative;justify-self:center;width:min(100%,380px)}
+.photo-shell{position:relative;padding:1px;border-radius:26px;
+  background:linear-gradient(150deg,rgba(124,240,255,.7),rgba(255,255,255,.05) 40%,rgba(124,92,255,.7));
+  box-shadow:0 30px 80px -34px rgba(45,226,242,.55)}
+.photo-inner{position:relative;border-radius:25px;overflow:hidden;background:#0A0D18;aspect-ratio:4/5}
+.photo-inner img{width:100%;height:100%;object-fit:cover;object-position:50% 26%}
+.photo-inner::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 58%,rgba(5,7,15,.5)),linear-gradient(125deg,rgba(45,226,242,.12),transparent 55%)}
+.scan{position:absolute;left:-10%;right:-10%;height:26%;top:-30%;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,transparent,rgba(124,240,255,.13),transparent);animation:scan 7s ease-in-out infinite}
+.photo-ring{position:absolute;inset:-26px;border-radius:38px;border:1px dashed rgba(124,240,255,.18);
+  animation:spin 46s linear infinite;pointer-events:none}
+.photo-ring::after{content:'';position:absolute;top:-3px;left:38%;width:6px;height:6px;border-radius:50%;
+  background:var(--cyan2);box-shadow:0 0 12px var(--cyan)}
+.chip-float{position:absolute;z-index:3;display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:11px;
+  border:1px solid var(--line);background:rgba(8,12,22,.86);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;color:#D6ECF8;box-shadow:0 16px 34px -16px #000}
+.chip-float svg{width:13px;height:13px;color:var(--cyan2)}
+.chip-float.a{left:-16px;bottom:44px}
+.chip-float.b{right:-12px;top:30px}
+.dot-live{width:6px;height:6px;border-radius:50%;background:#34D399;box-shadow:0 0 8px #34D399}
+.scroll-cue{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:none;flex-direction:column;
+  align-items:center;gap:8px;font-family:var(--mono);font-size:.54rem;letter-spacing:.24em;text-transform:uppercase;color:#64718A}
+.scroll-cue span{display:block;width:1px;height:32px;background:linear-gradient(180deg,transparent,var(--cyan),transparent);position:relative;overflow:hidden}
+.scroll-cue span::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent,#fff,transparent);animation:cue 2.4s var(--ease) infinite}
+@media (min-width:1100px){.scroll-cue{display:flex}}
+@media (max-width:900px){
+  .hero{min-height:auto;padding-top:112px;padding-bottom:74px}
+  .hero-grid{grid-template-columns:1fr;gap:46px}
+  .hero-media{order:2;width:min(100%,320px)}
+  .hero-copy{order:1}
+  .stats{gap:22px}
+}
+@media (max-width:420px){.hero-cta .btn{width:100%}}
+/* ================= SECTION HEAD ================= */
+.sec-head{max-width:760px;margin-bottom:clamp(34px,5vw,54px)}
+.sec-label{display:inline-flex;align-items:center;gap:11px;font-family:var(--mono);font-size:.63rem;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--cyan2)}
+.sec-label::before{content:'';width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan))}
+.sec-label b{color:#52707F;font-weight:400}
+.sec-title{margin:14px 0 0;font-size:clamp(1.72rem,4.2vw,2.7rem);line-height:1.14;letter-spacing:-.032em;font-weight:700}
+.sec-sub{margin:14px 0 0;color:var(--muted);font-size:.96rem;max-width:62ch}
+/* ================= CARD ================= */
+.card{position:relative;border:1px solid var(--line);border-radius:var(--r);
+  background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.card::before,.card::after{content:'';position:absolute;width:14px;height:14px;pointer-events:none;
+  border-color:rgba(124,240,255,.32);border-style:solid}
+.card::before{top:-1px;left:-1px;border-width:1px 0 0 1px;border-top-left-radius:var(--r)}
+.card::after{right:-1px;bottom:-1px;border-width:0 1px 1px 0;border-bottom-right-radius:var(--r)}
+.hoverable{transition:transform .35s var(--ease),border-color .3s,box-shadow .35s}
+.hoverable:hover{border-color:rgba(124,240,255,.28);box-shadow:0 24px 60px -30px rgba(45,226,242,.5);transform:translateY(-4px)}
+/* ================= ABOUT ================= */
+.about-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(26px,4vw,48px);align-items:start}
+.about-text p{color:#B0BDD0;margin:0 0 16px;font-size:clamp(.94rem,1.7vw,1.02rem)}
+.about-text p:last-child{margin-bottom:0}
+.about-text strong{color:#ECFAFF;font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;
+  border:1px solid var(--line);background:rgba(255,255,255,.035);font-size:.78rem;color:#CBD8E8}
+.chip i{width:5px;height:5px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);flex:none}
+.profile-card{padding:22px}
+.profile-head{display:flex;align-items:center;gap:12px;padding-bottom:16px;margin-bottom:4px;border-bottom:1px solid var(--line)}
+.profile-avatar{width:44px;height:44px;border-radius:12px;overflow:hidden;border:1px solid rgba(124,240,255,.25);flex:none}
+.profile-avatar img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.profile-head b{display:block;font-size:.92rem;font-weight:600}
+.profile-head span{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.profile-row{display:flex;gap:14px;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.07)}
+.profile-row:last-child{border-bottom:0;padding-bottom:2px}
+.profile-row .k{flex:none;width:82px;padding-top:3px;font-family:var(--mono);font-size:.57rem;
+  letter-spacing:.14em;text-transform:uppercase;color:#74839B;line-height:1.7}
+.profile-row .v{font-size:.83rem;color:#E2E9F6;line-height:1.55;overflow-wrap:anywhere}
+.profile-row .v a:hover{color:var(--cyan2)}
+/* ================= SKILLS ================= */
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.skill-card{padding:22px;overflow:hidden}
+.skill-num{position:absolute;right:16px;top:8px;font-family:var(--mono);font-size:2.5rem;font-weight:600;
+  color:rgba(255,255,255,.05);line-height:1;pointer-events:none}
+.skill-ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:#A8F4FF;
+  border:1px solid rgba(124,240,255,.22);background:linear-gradient(145deg,rgba(45,226,242,.16),rgba(124,92,255,.16));
+  box-shadow:inset 0 0 18px rgba(45,226,242,.08)}
+.skill-ico svg{width:20px;height:20px}
+.skill-card h3{margin:16px 0 6px;font-size:1rem;letter-spacing:-.01em}
+.skill-card p{margin:0;font-size:.82rem;color:var(--muted);min-height:2.6em}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.tag{font-family:var(--mono);font-size:.66rem;padding:5px 8px;border-radius:7px;
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);color:#CAD7E9;transition:.2s}
+.skill-card:hover .tag{border-color:rgba(124,240,255,.2)}
+/* ================= MARQUEE ================= */
+.marquee{margin-top:28px;border-block:1px solid var(--line);padding:13px 0;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee-track{display:flex;width:max-content;animation:scrollx 44s linear infinite}
+.marquee-track span{display:flex;align-items:center;gap:22px;padding-right:22px;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:#8696B0;white-space:nowrap}
+.marquee-track span::after{content:'';width:4px;height:4px;border-radius:50%;background:rgba(124,240,255,.45);flex:none}
+.marquee:hover .marquee-track{animation-play-state:paused}
+/* ================= EXPERIENCE ================= */
+.timeline{position:relative;padding-left:42px}
+.timeline::before{content:'';position:absolute;left:15px;top:12px;bottom:12px;width:2px;border-radius:2px;
+  background:linear-gradient(180deg,transparent,rgba(45,226,242,.7) 10%,rgba(124,92,255,.7) 72%,transparent)}
+.tl-item{position:relative;padding:20px 22px;margin-bottom:16px}
+.tl-item::before{content:'';position:absolute;left:-34px;top:27px;width:12px;height:12px;border-radius:50%;
+  background:#05070F;border:2px solid var(--cyan);box-shadow:0 0 14px rgba(45,226,242,.7)}
+.tl-item.current::before{background:var(--cyan);animation:pulse 2.4s var(--ease) infinite}
+.tl-date{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--mono);
+  font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#8496AE}
+.badge-now{display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;
+  border:1px solid rgba(52,211,153,.3);background:rgba(52,211,153,.1);color:#7EF0BD;
+  font-size:.55rem;letter-spacing:.14em}
+.badge-now i{width:5px;height:5px;border-radius:50%;background:#34D399;box-shadow:0 0 8px #34D399;animation:pulse 1.8s infinite}
+.tl-item h3{margin:9px 0 2px;font-size:1.06rem;letter-spacing:-.015em}
+.tl-role{font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;color:var(--cyan2);margin:0 0 12px}
+.tl-list li{position:relative;padding-left:16px;margin-bottom:6px;font-size:.85rem;color:#AEBACD;line-height:1.6}
+.tl-list li:last-child{margin-bottom:0}
+.tl-list li::before{content:'';position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:1px;
+  background:rgba(124,240,255,.65);transform:rotate(45deg)}
+.tl-extra{margin-top:14px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.08);
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:.79rem;color:#BFCBDC}
+.tl-extra .lab{font-family:var(--mono);font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#74839B;border:1px solid var(--line);border-radius:5px;padding:2px 6px}
+.tl-extra .mini{font-family:var(--mono);font-size:.6rem;color:#9CF3FF;background:rgba(45,226,242,.08);
+  border:1px solid rgba(45,226,242,.2);padding:2px 7px;border-radius:5px}
+/* ================= PROJECTS ================= */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.proj-card{overflow:hidden;display:flex;flex-direction:column}
+.p-cover{position:relative;height:148px;overflow:hidden;border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(150deg,var(--c1,rgba(45,226,242,.25)),transparent 55%),
+    linear-gradient(330deg,var(--c2,rgba(124,92,255,.25)),transparent 55%),#070912}
+.p-cover::after{content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
+  background-size:26px 26px;
+  -webkit-mask-image:radial-gradient(70% 80% at 50% 40%,#000,transparent);
+  mask-image:radial-gradient(70% 80% at 50% 40%,#000,transparent)}
+.p-mark{position:absolute;left:20px;bottom:10px;font-family:var(--mono);font-size:2.4rem;font-weight:600;
+  letter-spacing:-.04em;color:rgba(255,255,255,.16);line-height:1;transition:color .35s}
+.p-kind{position:absolute;right:16px;top:14px;font-family:var(--mono);font-size:.55rem;letter-spacing:.16em;
+  text-transform:uppercase;color:#CFF4FF;border:1px solid rgba(124,240,255,.25);padding:4px 8px;
+  border-radius:5px;background:rgba(5,10,18,.55)}
+.proj-card:hover .p-mark{color:rgba(255,255,255,.32)}
+.proj-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.proj-body h3{margin:0;font-size:1rem;letter-spacing:-.01em}
+.proj-body p{margin:0;font-size:.83rem;color:var(--muted);flex:1}
+.proj-tags{display:flex;flex-wrap:wrap;gap:6px}
+.proj-link{display:inline-flex;align-items:center;gap:6px;font-size:.79rem;font-weight:600;color:var(--cyan2);width:fit-content}
+.proj-link svg{width:14px;height:14px;transition:transform .25s}
+.proj-link:hover svg{transform:translate(2px,-2px)}
+/* ================= EDUCATION ================= */
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.edu-card{padding:22px;display:flex;gap:16px;align-items:flex-start}
+.edu-ico{width:44px;height:44px;flex:none;border-radius:12px;display:grid;place-items:center;color:#A8F4FF;
+  background:rgba(45,226,242,.08);border:1px solid rgba(45,226,242,.2)}
+.edu-ico svg{width:20px;height:20px}
+.edu-card h3{margin:0 0 3px;font-size:.97rem}
+.edu-meta{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+  color:#8496AE;margin:0 0 8px}
+.edu-note{margin:0;font-size:.81rem;color:var(--muted)}
+/* ================= CONTACT ================= */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  gap:clamp(24px,4vw,40px);align-items:start}
+.term{border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  background:linear-gradient(170deg,rgba(10,16,30,.92),rgba(6,9,18,.92));
+  box-shadow:0 30px 70px -42px rgba(45,226,242,.45)}
+.term-bar{display:flex;align-items:center;gap:7px;padding:10px 14px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.025)}
+.term-bar i{width:9px;height:9px;border-radius:50%;background:#3C4559}
+.term-bar i:nth-child(1){background:#FF5F57}
+.term-bar i:nth-child(2){background:#FEBC2E}
+.term-bar i:nth-child(3){background:#28C840}
+.term-bar span{margin-left:8px;font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;color:#72819A}
+.term-body{padding:20px}
+.term-line{display:flex;gap:8px;align-items:center;font-family:var(--mono);font-size:.71rem;color:#8496AE;margin:0 0 6px}
+.term-line .t-p{color:var(--cyan);text-shadow:0 0 10px rgba(45,226,242,.6)}
+.term-out{font-family:var(--mono);font-size:.79rem;color:#CDEDF8;margin:0 0 16px;padding-left:17px;line-height:1.6}
+.mail-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 18px 17px}
+.mail-addr{font-family:var(--mono);font-size:clamp(.8rem,2vw,1rem);color:#F0FDFF;
+  border-bottom:1px dashed rgba(124,240,255,.35);padding-bottom:2px;overflow-wrap:anywhere}
+.mail-addr:hover{color:var(--cyan2)}
+.copy-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:8px;
+  border:1px solid rgba(124,240,255,.25);background:rgba(45,226,242,.08);font-family:var(--mono);
+  font-size:.63rem;letter-spacing:.06em;color:#C8FAFF;transition:.2s}
+.copy-btn:hover{background:rgba(45,226,242,.16);border-color:rgba(124,240,255,.45)}
+.copy-btn svg{width:13px;height:13px}
+.contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.contact-list{display:flex;flex-direction:column;gap:9px}
+.c-item{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;
+  border:1px solid var(--line);background:rgba(255,255,255,.03);transition:.25s}
+.c-item:hover{border-color:rgba(124,240,255,.3);background:rgba(45,226,242,.06);transform:translateX(3px)}
+.c-ico{width:34px;height:34px;flex:none;border-radius:9px;display:grid;place-items:center;color:#A8F4FF;
+  background:rgba(45,226,242,.09);border:1px solid rgba(45,226,242,.18)}
+.c-ico svg{width:16px;height:16px}
+.c-item .k{display:block;font-family:var(--mono);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:#74839B;line-height:1.7}
+.c-item .v{display:block;font-size:.81rem;color:#E2E9F6;overflow-wrap:anywhere}
+/* ================= FOOTER ================= */
+.footer{border-top:1px solid var(--line);padding:26px 0 30px}
+.footer-inner{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;
+  font-size:.78rem;color:var(--muted)}
+.footer-inner .mono{font-family:var(--mono);font-size:.65rem;letter-spacing:.06em}
+.footer-links{display:flex;gap:16px}
+.footer-links a:hover{color:var(--cyan2)}
+/* ================= UI BITS ================= */
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);z-index:90;padding:10px 16px;
+  border-radius:11px;border:1px solid rgba(124,240,255,.3);background:rgba(8,14,26,.95);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  font-family:var(--mono);font-size:.71rem;color:#DAFBFF;box-shadow:0 20px 50px -20px #000;
+  opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.to-top{position:fixed;right:18px;bottom:18px;z-index:75;width:44px;height:44px;display:grid;place-items:center;
+  border-radius:12px;border:1px solid var(--line);background:rgba(8,12,22,.85);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  color:#D6ECF8;opacity:0;visibility:hidden;transform:translateY(10px);transition:.3s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{border-color:rgba(124,240,255,.45);color:var(--cyan2)}
+.to-top svg{width:18px;height:18px}
+/* ================= REVEAL ================= */
+.js .reveal{opacity:0;transform:translateY(22px);
+  transition:opacity .75s var(--ease),transform .75s var(--ease);transition-delay:var(--d,0ms)}
+.js .reveal.in{opacity:1;transform:none}
+/* ================= RESPONSIVE ================= */
+@media (max-width:1080px){
+  .nav-links{display:none}
+  .burger{display:block}
+}
+@media (max-width:900px){
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .timeline{padding-left:30px}
+  .timeline::before{left:9px}
+  .tl-item::before{left:-27px;width:10px;height:10px;top:25px}
+  .tl-item{padding:18px}
+  .contact-list{order:-1}
+}
+@media (max-width:640px){
+  .wrap{width:calc(100% - 32px)}
+  .hero-grid{width:calc(100% - 32px)}
+  section{padding:56px 0}
+  .profile-row .k{width:72px}
+  .term-body{padding:16px}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .to-top{bottom:14px;right:14px}
+}
+@media (max-width:420px){
+  .brand-text small{display:none}
+  .chip-float.a{left:-6px}
+  .chip-float.b{right:-4px}
+  .stats{gap:18px}
+  .stat b{font-size:1.35rem}
+}
+/* ================= KEYFRAMES ================= */
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+@keyframes sheen{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes scan{0%{top:-30%}55%{top:112%}100%{top:112%}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes cue{0%{transform:translateY(-100%)}60%,100%{transform:translateY(100%)}}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important}
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1 !important;transform:none !important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Langsung ke konten</a>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+<canvas id="bg" class="bg-canvas" aria-hidden="true"></canvas>
+<div class="glow" id="glow" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+<!-- ============ ICON SPRITE ============ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false"
+  fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.6 7 8.4 6 8.4-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h3.2l1.9 4.8-2.4 1.5a12 12 0 0 0 6 6l1.5-2.4L20 15v3a2.2 2.2 0 0 1-2.4 2.2A16.8 16.8 0 0 1 2.8 5.4A2.2 2.2 0 0 1 5 3Z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3.6 20.5l1.4-4.3a8.5 8.5 0 1 1 15.5-4.6Z"/><path d="M8.7 8.4c.2-.6.4-.6.7-.6h.6c.2 0 .4 0 .6.5l.7 1.8c.1.3 0 .5-.1.6l-.5.6c-.2.2-.2.4-.1.6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.6-.7c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .3 0 1-.4 1.5-.5.5-1.2.8-2 .7-1.1-.1-2.7-.7-4.1-2-1.4-1.4-2.1-2.8-2.2-3.9-.1-.8.2-1.5.7-2Z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v11m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V5m0 0-6 6m6-6 6 6"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m9 8-4 4 4 4m6-8 4 4-4 4"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+  <symbol id="i-grad" viewBox="0 0 24 24"><path d="m3 9 9-4 9 4-9 4-9-4Z"/><path d="M7 11v4c0 1.5 2.2 2.5 5 2.5s5-1 5-2.5v-4"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#home" aria-label="M. Bayu Adi Putra — Beranda">
+      <span class="brand-mark" aria-hidden="true">MB</span>
+      <span class="brand-text">M. Bayu Adi Putra<small>Technical Operations</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="#home" class="active" data-i18n="nav_home">Beranda</a>
+      <a href="#about" data-i18n="nav_about">Tentang</a>
+      <a href="#skills" data-i18n="nav_skills">Keahlian</a>
+      <a href="#experience" data-i18n="nav_exp">Pengalaman</a>
+      <a href="#projects" data-i18n="nav_projects">Proyek</a>
+      <a href="#education" data-i18n="nav_edu">Edukasi</a>
+      <a href="#contact" data-i18n="nav_contact">Kontak</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="id" class="active" aria-pressed="true">ID</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="sheet" aria-label="Buka menu">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <nav class="sheet-nav" aria-label="Navigasi mobile">
+    <a href="#home"><em>01</em><span data-i18n="nav_home">Beranda</span></a>
+    <a href="#about"><em>02</em><span data-i18n="nav_about">Tentang</span></a>
+    <a href="#skills"><em>03</em><span data-i18n="nav_skills">Keahlian</span></a>
+    <a href="#experience"><em>04</em><span data-i18n="nav_exp">Pengalaman</span></a>
+    <a href="#projects"><em>05</em><span data-i18n="nav_projects">Proyek</span></a>
+    <a href="#education"><em>06</em><span data-i18n="nav_edu">Edukasi</span></a>
+    <a href="#contact"><em>07</em><span data-i18n="nav_contact">Kontak</span></a>
+  </nav>
+  <div class="sheet-foot">
+    <a href="mailto:bayuputra649@gmail.com">bayuputra649@gmail.com</a>
+    <a href="https://github.com/Anonym2309" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://wa.me/6285169613703" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</div>
+
+<main id="main">
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="pill reveal"><i></i><span data-i18n="hero_status">Terbuka untuk peluang baru</span></span>
+      <h1 class="reveal" style="--d:60ms">
+        <span class="hero-greet" data-i18n="hero_greet">Halo, saya</span>
+        <span class="grad">M. Bayu Adi Putra</span>
+      </h1>
+      <p class="typed-line reveal" style="--d:110ms">
+        <span class="typed-prefix" aria-hidden="true">&gt;</span>
+        <span id="typed" class="typed">Technical Operations</span><span class="caret" aria-hidden="true"></span>
+      </p>
+      <p class="hero-desc reveal" style="--d:160ms" data-i18n="hero_desc">Technical Operations yang juga berpengalaman sebagai Project Manager dan Scrum Master. Lebih dari 16 tahun menjaga sistem tetap berjalan dan produk tetap terkirim.</p>
+      <div class="hero-cta reveal" style="--d:210ms">
+        <a class="btn btn-primary" href="assets/cv/M-Bayu-Adi-Putra-CV.pdf" download>
+          <svg width="17" height="17" aria-hidden="true"><use href="#i-download"/></svg>
+          <span data-i18n="hero_cta1">Unduh CV</span>
+        </a>
+        <a class="btn btn-ghost" href="#contact">
+          <span data-i18n="hero_cta2">Mari Terhubung</span>
+          <svg width="17" height="17" aria-hidden="true"><use href="#i-ext"/></svg>
+        </a>
+      </div>
+      <div class="stats reveal" style="--d:260ms">
+        <div class="stat"><b>16+</b><span data-i18n="stat1">Tahun pengalaman</span></div>
+        <div class="stat"><b>5</b><span data-i18n="stat2">Perusahaan</span></div>
+        <div class="stat"><b>3</b><span data-i18n="stat3">Peran inti</span></div>
+      </div>
+    </div>
+    <div class="hero-media reveal" style="--d:140ms">
+      <div class="photo-ring" aria-hidden="true"></div>
+      <div class="photo-shell">
+        <div class="photo-inner">
+          <img src="assets/img/photo.jpg" alt="Foto M. Bayu Adi Putra" data-i18n-alt="photo_alt"
+            width="494" height="640" fetchpriority="high" decoding="async">
+          <span class="scan" aria-hidden="true"></span>
+        </div>
+      </div>
+      <span class="chip-float a"><svg width="13" height="13" aria-hidden="true"><use href="#i-pin"/></svg>Depok, ID</span>
+      <span class="chip-float b"><span class="dot-live"></span>16+ yrs</span>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#about" aria-label="Gulir ke bagian tentang"><span></span>scroll</a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label"><b>01</b><span data-i18n="about_label">Tentang</span></span>
+      <h2 class="sec-title" data-i18n="about_title">Profesional operasional dengan naluri produk.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p data-i18n="about_p1">Saya bekerja di persimpangan antara operasional dan produk. Selama lebih dari 16 tahun, saya menangani application support, operasional teknis, hingga memimpin tim pengembangan sebagai Project Manager dan Scrum Master.</p>
+        <p data-i18n="about_p2">Keseharian saya adalah memastikan sistem POS, aplikasi mobile, e-commerce, dan CMS portal tetap berjalan — dari membaca log di Kibana dan menjaga container di Kubernetes, sampai memastikan sprint selesai tepat waktu. Saya cepat mempelajari hal baru dan percaya bahwa komunikasi tim yang jelas adalah kunci pengiriman yang rapi.</p>
+        <div class="chips">
+          <span class="chip"><i></i><span data-i18n="chip1">Cepat belajar hal baru</span></span>
+          <span class="chip"><i></i><span data-i18n="chip2">Antusias software &amp; hardware</span></span>
+          <span class="chip"><i></i><span data-i18n="chip3">Tepat waktu</span></span>
+          <span class="chip"><i></i><span data-i18n="chip4">Mudah bersosialisasi</span></span>
+          <span class="chip"><i></i><span data-i18n="chip5">Kerja tim</span></span>
+        </div>
+      </div>
+      <aside class="profile-card card reveal" style="--d:120ms" aria-label="Ringkasan profil">
+        <div class="profile-head">
+          <span class="profile-avatar"><img src="assets/img/photo.jpg" alt="" width="44" height="44" loading="lazy"></span>
+          <div><b>M. Bayu Adi Putra</b><span data-i18n="profile_role">Technical Operations · PM</span></div>
+        </div>
+        <div class="profile-row"><span class="k" data-i18n="row_loc">Lokasi</span><span class="v" data-i18n="row_loc_v">Depok, Jawa Barat, Indonesia</span></div>
+        <div class="profile-row"><span class="k" data-i18n="row_mail">Email</span><span class="v"><a href="mailto:bayuputra649@gmail.com">bayuputra649@gmail.com</a></span></div>
+        <div class="profile-row"><span class="k" data-i18n="row_phone">Telepon</span><span class="v">+62 851-6961-3703<br>+62 896-1464-4904</span></div>
+        <div class="profile-row"><span class="k" data-i18n="row_status">Status</span><span class="v" data-i18n="row_status_v">Terbuka untuk peluang</span></div>
+        <div class="profile-row"><span class="k" data-i18n="row_lang">Bahasa</span><span class="v" data-i18n="row_lang_v">Indonesia · Inggris</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label"><b>02</b><span data-i18n="skills_label">Keahlian</span></span>
+      <h2 class="sec-title" data-i18n="skills_title">Perangkat dan teknologi yang saya gunakan setiap hari.</h2>
+      <p class="sec-sub" data-i18n="skills_sub">Dari baris perintah di server hingga backlog sprint — inilah area yang paling sering saya sentuh.</p>
+    </div>
+    <div class="skill-grid">
+      <article class="skill-card card hoverable reveal">
+        <span class="skill-num" aria-hidden="true">01</span>
+        <span class="skill-ico"><svg width="20" height="20" aria-hidden="true"><use href="#i-layers"/></svg></span>
+        <h3 data-i18n="cat1_t">Sistem &amp; Infrastruktur</h3>
+        <p data-i18n="cat1_d">Menjaga server, container, dan log tetap terbaca dan sehat.</p>
+        <div class="tags">
+          <span class="tag">Linux</span><span class="tag">Windows</span><span class="tag">macOS</span>
+          <span class="tag">Kubernetes</span><span class="tag">Kibana</span>
+        </div>
+      </article>
+      <article class="skill-card card hoverable reveal" style="--d:80ms">
+        <span class="skill-num" aria-hidden="true">02</span>
+        <span class="skill-ico"><svg width="20" height="20" aria-hidden="true"><use href="#i-code"/></svg></span>
+        <h3 data-i18n="cat2_t">Pengembangan Web</h3>
+        <p data-i18n="cat2_d">Membangun dan merawat antarmuka serta layanan backend.</p>
+        <div class="tags">
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Node.js</span>
+        </div>
+      </article>
+      <article class="skill-card card hoverable reveal" style="--d:160ms">
+        <span class="skill-num" aria-hidden="true">03</span>
+        <span class="skill-ico"><svg width="20" height="20" aria-hidden="true"><use href="#i-db"/></svg></span>
+        <h3 data-i18n="cat3_t">Basis Data</h3>
+        <p data-i18n="cat3_d">Query, migrasi, dan troubleshooting data operasional.</p>
+        <div class="tags">
+          <span class="tag">SQL Server</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span>
+          <span class="tag">Oracle</span><span class="tag">SQLyog</span>
+        </div>
+      </article>
+      <article class="skill-card card hoverable reveal" style="--d:240ms">
+        <span class="skill-num" aria-hidden="true">04</span>
+        <span class="skill-ico"><svg width="20" height="20" aria-hidden="true"><use href="#i-tools"/></svg></span>
+        <h3 data-i18n="cat4_t">Tools &amp; Domain</h3>
+        <p data-i18n="cat4_d">Alat bantu harian dan domain produk yang saya kuasai.</p>
+        <div class="tags">
+          <span class="tag">Postman</span><span class="tag">POS System</span><span class="tag">Mobile Apps</span>
+          <span class="tag">E-Commerce</span><span class="tag">CMS Portal</span><span class="tag">Scrum</span>
+        </div>
+      </article>
+    </div>
+    <div class="marquee reveal" aria-hidden="true" style="--d:120ms">
+      <div class="marquee-track">
+        <span>Linux</span><span>Windows</span><span>macOS</span><span>Kubernetes</span><span>Kibana</span>
+        <span>Node.js</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>SQL Server</span>
+        <span>MySQL</span><span>PostgreSQL</span><span>Oracle</span><span>Postman</span><span>POS</span>
+        <span>E-Commerce</span><span>CMS Portal</span><span>Scrum</span>
+        <span>Linux</span><span>Windows</span><span>macOS</span><span>Kubernetes</span><span>Kibana</span>
+        <span>Node.js</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>SQL Server</span>
+        <span>MySQL</span><span>PostgreSQL</span><span>Oracle</span><span>Postman</span><span>POS</span>
+        <span>E-Commerce</span><span>CMS Portal</span><span>Scrum</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label"><b>03</b><span data-i18n="exp_label">Pengalaman</span></span>
+      <h2 class="sec-title" data-i18n="exp_title">Jejak karier dari support hingga memimpin proyek.</h2>
+      <p class="sec-sub" data-i18n="exp_sub">Enam belas tahun belajar dari lapangan: menangani insiden, menjaga layanan, lalu mengatur ritme tim.</p>
+    </div>
+    <div class="timeline">
+      <!-- EDIT: bullet pencapaian tiap posisi boleh disesuaikan -->
+      <article class="tl-item card current reveal">
+        <div class="tl-date">
+          <span data-i18n="e1_date">Nov 2023 — Sekarang</span>
+          <span class="badge-now"><i></i><span data-i18n="badge_now">Sekarang</span></span>
+        </div>
+        <h3>PT Tiga Akar Mimpi — Mind Stores</h3>
+        <p class="tl-role" data-i18n="e1_role">Technical Operation</p>
+        <ul class="tl-list">
+          <li data-i18n="e1_b1">Menjaga ketersediaan sistem POS di seluruh gerai, termasuk monitoring, troubleshooting, dan eskalasi insiden.</li>
+          <li data-i18n="e1_b2">Berkoordinasi dengan tim produk, vendor, dan tim lapangan agar operasional harian berjalan tanpa gangguan.</li>
+          <li data-i18n="e1_b3">Menganalisis log dan akar masalah untuk mempercepat penyelesaian gangguan yang berulang.</li>
+        </ul>
+      </article>
+      <article class="tl-item card reveal" style="--d:80ms">
+        <div class="tl-date"><span data-i18n="e2_date">Agu 2021 — Okt 2023</span></div>
+        <h3>PT Neosoft Teknologi Asia</h3>
+        <p class="tl-role" data-i18n="e2_role">Project Manager / Scrum Master</p>
+        <ul class="tl-list">
+          <li data-i18n="e2_b1">Memfasilitasi sprint planning, daily stand-up, sprint review, dan retrospektif untuk tim pengembangan.</li>
+          <li data-i18n="e2_b2">Mengelola backlog, prioritas fitur, serta komunikasi dengan stakeholder produk.</li>
+          <li data-i18n="e2_b3">Menjaga timeline dan kualitas rilis agar sesuai kebutuhan bisnis.</li>
+        </ul>
+        <div class="tl-extra">
+          <span class="lab" data-i18n="lab_also">Juga</span>
+          <span data-i18n="e2_extra">Technical Operation — PT Meteor Inovasi Digital</span>
+          <span class="mini">Alfamind V3/V4</span>
+        </div>
+      </article>
+      <article class="tl-item card reveal" style="--d:160ms">
+        <div class="tl-date"><span data-i18n="e3_date">Nov 2018 — Agu 2021</span></div>
+        <h3>PT Meteor Inovasi Digital</h3>
+        <p class="tl-role" data-i18n="e3_role">Technical Operation</p>
+        <ul class="tl-list">
+          <li data-i18n="e3_b1">Menangani operasional teknis harian dan dukungan produksi untuk layanan digital.</li>
+          <li data-i18n="e3_b2">Memantau performa sistem, menjalankan deployment, dan mengoordinasikan penanganan insiden lintas tim.</li>
+        </ul>
+        <div class="tl-extra">
+          <span class="lab" data-i18n="lab_assign">Penempatan</span>
+          <span>PT Axiata Digital Services Indonesia</span>
+        </div>
+      </article>
+      <article class="tl-item card reveal" style="--d:240ms">
+        <div class="tl-date"><span data-i18n="e4_date">Jun 2013 — Sep 2018</span></div>
+        <h3>PT Samafitro <span style="color:#74839B;font-weight:400;font-size:.85em">(Member of Asaba Group)</span></h3>
+        <p class="tl-role" data-i18n="e4_role">Application Support</p>
+        <ul class="tl-list">
+          <li data-i18n="e4_b1">Memberikan dukungan aplikasi untuk pengguna internal maupun klien.</li>
+          <li data-i18n="e4_b2">Menangani tiket, troubleshooting, instalasi, dan dokumentasi solusi.</li>
+        </ul>
+      </article>
+      <article class="tl-item card reveal" style="--d:320ms">
+        <div class="tl-date"><span data-i18n="e5_date">Mar 2010 — Jun 2013</span></div>
+        <h3>Yuyugaming <span style="color:#74839B;font-weight:400;font-size:.85em">Rising Force Online</span></h3>
+        <p class="tl-role" data-i18n="e5_role">Game Master</p>
+        <ul class="tl-list">
+          <li data-i18n="e5_b1">Mengelola komunitas pemain, event in-game, dan moderasi.</li>
+          <li data-i18n="e5_b2">Menjadi jembatan antara pemain dan tim teknis server.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label"><b>04</b><span data-i18n="proj_label">Proyek</span></span>
+      <h2 class="sec-title" data-i18n="proj_title">Sistem yang saya bantu jaga dan kembangkan.</h2>
+      <p class="sec-sub" data-i18n="proj_sub">Sebagian besar pekerjaan saya berlangsung di balik layar — memastikan platform retail dan operasional tetap hidup.</p>
+    </div>
+    <div class="proj-grid">
+      <article class="proj-card card hoverable reveal">
+        <div class="p-cover" style="--c1:rgba(45,226,242,.3);--c2:rgba(124,92,255,.3)" aria-hidden="true">
+          <span class="p-mark">A3</span>
+          <span class="p-kind">Retail / POS</span>
+        </div>
+        <div class="proj-body">
+          <h3>Alfamind V3 &amp; V4</h3>
+          <p data-i18n="p1_d">Platform retail dan e-commerce: operasional teknis, monitoring rilis, serta koordinasi lintas tim selama transisi V3 ke V4.</p>
+          <div class="proj-tags">
+            <span class="tag">POS</span><span class="tag">E-Commerce</span><span class="tag">Operations</span>
+          </div>
+          <span class="proj-link" style="color:#8496AE" data-i18n="proj_pro">Proyek profesional</span>
+        </div>
+      </article>
+      <article class="proj-card card hoverable reveal" style="--d:90ms">
+        <div class="p-cover" style="--c1:rgba(124,92,255,.32);--c2:rgba(45,226,242,.26)" aria-hidden="true">
+          <span class="p-mark">MS</span>
+          <span class="p-kind">Retail / Support</span>
+        </div>
+        <div class="proj-body">
+          <h3>Mind Stores</h3>
+          <p data-i18n="p2_d">Sistem POS dan operasional gerai: dukungan harian, troubleshooting, eskalasi insiden, dan analisis log.</p>
+          <div class="proj-tags">
+            <span class="tag">POS</span><span class="tag">Troubleshooting</span><span class="tag">Ops</span>
+          </div>
+          <span class="proj-link" style="color:#8496AE" data-i18n="proj_pro">Proyek profesional</span>
+        </div>
+      </article>
+      <article class="proj-card card hoverable reveal" style="--d:180ms">
+        <div class="p-cover" style="--c1:rgba(52,211,153,.24);--c2:rgba(45,226,242,.28)" aria-hidden="true">
+          <span class="p-mark">GH</span>
+          <span class="p-kind">Code</span>
+        </div>
+        <div class="proj-body">
+          <h3>GitHub — Anonym2309</h3>
+          <p data-i18n="p3_d">Kumpulan eksperimen kode, utilitas kecil, dan proyek sampingan yang saya kerjakan di luar jam kerja.</p>
+          <div class="proj-tags">
+            <span class="tag">Node.js</span><span class="tag">JavaScript</span><span class="tag">Open Source</span>
+          </div>
+          <a class="proj-link" href="https://github.com/Anonym2309" target="_blank" rel="noopener">
+            <span data-i18n="p3_link">Lihat GitHub</span>
+            <svg width="14" height="14" aria-hidden="true"><use href="#i-ext"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label"><b>05</b><span data-i18n="edu_label">Edukasi</span></span>
+      <h2 class="sec-title" data-i18n="edu_title">Latar belakang pendidikan.</h2>
+    </div>
+    <div class="edu-grid">
+      <article class="edu-card card hoverable reveal">
+        <span class="edu-ico"><svg width="20" height="20" aria-hidden="true"><use href="#i-grad"/></svg></span>
+        <div>
+          <h3>Al-Hasra Senior High School</h3>
+          <p class="edu-meta">2004 · Depok, Jawa Barat</p>
+          <p class="edu-note" data-i18n="edu1_note">Sekolah menengah atas.</p>
+        </div>
+      </article>
+      <article class="edu-card card hoverable reveal" style="--d:100ms">
+        <span class="edu-ico"><svg width="20" height="20" aria-hidden="true"><use href="#i-case"/></svg></span>
+        <div>
+          <h3>Universitas Pamulang</h3>
+          <p class="edu-meta" data-i18n="edu2_meta">Pendidikan tinggi</p>
+          <p class="edu-note" data-i18n="edu2_note">Tidak diselesaikan — ilmu tetap berjalan lewat praktik dan proyek nyata.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label"><b>06</b><span data-i18n="contact_label">Kontak</span></span>
+      <h2 class="sec-title" data-i18n="contact_title">Punya peran atau proyek yang cocok? Mari bicara.</h2>
+      <p class="sec-sub" data-i18n="contact_sub">Terbuka untuk diskusi seputar Technical Operations, Project Management, maupun Scrum Mastery. Balasan biasanya dalam 1×24 jam.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="term reveal">
+        <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span>bayu@portfolio:~</span></div>
+        <div class="term-body">
+          <p class="term-line"><span class="t-p">$</span> whoami</p>
+          <p class="term-out">Technical Operations / Project Manager / Scrum Master</p>
+          <p class="term-line"><span class="t-p">$</span> mail --to</p>
+          <div class="mail-row">
+            <a class="mail-addr" href="mailto:bayuputra649@gmail.com">bayuputra649@gmail.com</a>
+            <button class="copy-btn" id="copyBtn" type="button">
+              <svg width="13" height="13" aria-hidden="true"><use href="#i-copy"/></svg>
+              <span id="copyLabel" data-i18n="contact_copy">Salin email</span>
+            </button>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:bayuputra649@gmail.com">
+              <svg width="17" height="17" aria-hidden="true"><use href="#i-mail"/></svg>
+              <span data-i18n="contact_cta">Kirim Email</span>
+            </a>
+            <a class="btn btn-ghost" href="https://wa.me/6285169613703" target="_blank" rel="noopener">
+              <svg width="17" height="17" aria-hidden="true"><use href="#i-wa"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-list reveal" style="--d:100ms">
+        <a class="c-item" href="mailto:bayuputra649@gmail.com">
+          <span class="c-ico"><svg width="16" height="16" aria-hidden="true"><use href="#i-mail"/></svg></span>
+          <span><span class="k" data-i18n="c_email">Email</span><span class="v">bayuputra649@gmail.com</span></span>
+        </a>
+        <a class="c-item" href="https://wa.me/6285169613703" target="_blank" rel="noopener">
+          <span class="c-ico"><svg width="16" height="16" aria-hidden="true"><use href="#i-wa"/></svg></span>
+          <span><span class="k">WhatsApp</span><span class="v">+62 851-6961-3703</span></span>
+        </a>
+        <a class="c-item" href="tel:+6289614644904">
+          <span class="c-ico"><svg width="16" height="16" aria-hidden="true"><use href="#i-phone"/></svg></span>
+          <span><span class="k" data-i18n="c_phone">Telepon</span><span class="v">+62 896-1464-4904</span></span>
+        </a>
+        <div class="c-item">
+          <span class="c-ico"><svg width="16" height="16" aria-hidden="true"><use href="#i-pin"/></svg></span>
+          <span><span class="k" data-i18n="c_loc">Lokasi</span><span class="v" data-i18n="c_loc_v">Depok, Jawa Barat, Indonesia</span></span>
+        </div>
+        <a class="c-item" href="https://github.com/Anonym2309" target="_blank" rel="noopener">
+          <span class="c-ico"><svg width="16" height="16" aria-hidden="true"><use href="#i-github"/></svg></span>
+          <span><span class="k">GitHub</span><span class="v">github.com/Anonym2309</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p class="mono" style="margin:0">© <span id="year">2026</span> M. Bayu Adi Putra</p>
+    <p class="mono" style="margin:0" data-i18n="footer_note">Dibangun dengan HTML, CSS &amp; JavaScript murni.</p>
+    <div class="footer-links">
+      <a href="https://github.com/Anonym2309" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:bayuputra649@gmail.com">Email</a>
+      <a href="#home" data-i18n="footer_top">Ke atas</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button class="to-top" id="toTop" type="button" data-i18n-aria="back_top" aria-label="Kembali ke atas">
+  <svg width="18" height="18" aria-hidden="true"><use href="#i-up"/></svg>
+</button>
+<script>
+(function () {
+  'use strict';
+
+  /* ==================== DATA ==================== */
+  var EMAIL = 'bayuputra649@gmail.com';
+
+  var I18N = {
+    id: {
+      skip: 'Langsung ke konten',
+      nav_home: 'Beranda', nav_about: 'Tentang', nav_skills: 'Keahlian',
+      nav_exp: 'Pengalaman', nav_projects: 'Proyek', nav_edu: 'Edukasi', nav_contact: 'Kontak',
+      hero_status: 'Terbuka untuk peluang baru',
+      hero_greet: 'Halo, saya',
+      hero_desc: 'Technical Operations yang juga berpengalaman sebagai Project Manager dan Scrum Master. Lebih dari 16 tahun menjaga sistem tetap berjalan dan produk tetap terkirim.',
+      hero_cta1: 'Unduh CV', hero_cta2: 'Mari Terhubung',
+      stat1: 'Tahun pengalaman', stat2: 'Perusahaan', stat3: 'Peran inti',
+      hero_roles: ['Technical Operations', 'Manajer Proyek', 'Scrum Master', 'Dukungan Aplikasi'],
+      photo_alt: 'Foto M. Bayu Adi Putra',
+      about_label: 'Tentang',
+      about_title: 'Profesional operasional dengan naluri produk.',
+      about_p1: 'Saya bekerja di persimpangan antara operasional dan produk. Selama lebih dari 16 tahun, saya menangani application support, operasional teknis, hingga memimpin tim pengembangan sebagai Project Manager dan Scrum Master.',
+      about_p2: 'Keseharian saya adalah memastikan sistem POS, aplikasi mobile, e-commerce, dan CMS portal tetap berjalan — dari membaca log di Kibana dan menjaga container di Kubernetes, sampai memastikan sprint selesai tepat waktu. Saya cepat mempelajari hal baru dan percaya bahwa komunikasi tim yang jelas adalah kunci pengiriman yang rapi.',
+      chip1: 'Cepat belajar hal baru', chip2: 'Antusias software & hardware', chip3: 'Tepat waktu',
+      chip4: 'Mudah bersosialisasi', chip5: 'Kerja tim',
+      profile_role: 'Technical Operations · PM',
+      row_loc: 'Lokasi', row_loc_v: 'Depok, Jawa Barat, Indonesia',
+      row_mail: 'Email', row_phone: 'Telepon', row_status: 'Status',
+      row_status_v: 'Terbuka untuk peluang', row_lang: 'Bahasa', row_lang_v: 'Indonesia · Inggris',
+      skills_label: 'Keahlian',
+      skills_title: 'Perangkat dan teknologi yang saya gunakan setiap hari.',
+      skills_sub: 'Dari baris perintah di server hingga backlog sprint — inilah area yang paling sering saya sentuh.',
+      cat1_t: 'Sistem & Infrastruktur', cat1_d: 'Menjaga server, container, dan log tetap terbaca dan sehat.',
+      cat2_t: 'Pengembangan Web', cat2_d: 'Membangun dan merawat antarmuka serta layanan backend.',
+      cat3_t: 'Basis Data', cat3_d: 'Query, migrasi, dan troubleshooting data operasional.',
+      cat4_t: 'Tools & Domain', cat4_d: 'Alat bantu harian dan domain produk yang saya kuasai.',
+      exp_label: 'Pengalaman',
+      exp_title: 'Jejak karier dari support hingga memimpin proyek.',
+      exp_sub: 'Enam belas tahun belajar dari lapangan: menangani insiden, menjaga layanan, lalu mengatur ritme tim.',
+      badge_now: 'Sekarang',
+      e1_date: 'Nov 2023 — Sekarang', e1_role: 'Technical Operation',
+      e1_b1: 'Menjaga ketersediaan sistem POS di seluruh gerai, termasuk monitoring, troubleshooting, dan eskalasi insiden.',
+      e1_b2: 'Berkoordinasi dengan tim produk, vendor, dan tim lapangan agar operasional harian berjalan tanpa gangguan.',
+      e1_b3: 'Menganalisis log dan akar masalah untuk mempercepat penyelesaian gangguan yang berulang.',
+      e2_date: 'Agu 2021 — Okt 2023', e2_role: 'Project Manager / Scrum Master',
+      e2_b1: 'Memfasilitasi sprint planning, daily stand-up, sprint review, dan retrospektif untuk tim pengembangan.',
+      e2_b2: 'Mengelola backlog, prioritas fitur, serta komunikasi dengan stakeholder produk.',
+      e2_b3: 'Menjaga timeline dan kualitas rilis agar sesuai kebutuhan bisnis.',
+      e2_extra: 'Technical Operation — PT Meteor Inovasi Digital', lab_also: 'Juga',
+      e3_date: 'Nov 2018 — Agu 2021', e3_role: 'Technical Operation',
+      e3_b1: 'Menangani operasional teknis harian dan dukungan produksi untuk layanan digital.',
+      e3_b2: 'Memantau performa sistem, menjalankan deployment, dan mengoordinasikan penanganan insiden lintas tim.',
+      lab_assign: 'Penempatan',
+      e4_date: 'Jun 2013 — Sep 2018', e4_role: 'Application Support',
+      e4_b1: 'Memberikan dukungan aplikasi untuk pengguna internal maupun klien.',
+      e4_b2: 'Menangani tiket, troubleshooting, instalasi, dan dokumentasi solusi.',
+      e5_date: 'Mar 2010 — Jun 2013', e5_role: 'Game Master',
+      e5_b1: 'Mengelola komunitas pemain, event in-game, dan moderasi.',
+      e5_b2: 'Menjadi jembatan antara pemain dan tim teknis server.',
+      proj_label: 'Proyek',
+      proj_title: 'Sistem yang saya bantu jaga dan kembangkan.',
+      proj_sub: 'Sebagian besar pekerjaan saya berlangsung di balik layar — memastikan platform retail dan operasional tetap hidup.',
+      p1_d: 'Platform retail dan e-commerce: operasional teknis, monitoring rilis, serta koordinasi lintas tim selama transisi V3 ke V4.',
+      p2_d: 'Sistem POS dan operasional gerai: dukungan harian, troubleshooting, eskalasi insiden, dan analisis log.',
+      p3_d: 'Kumpulan eksperimen kode, utilitas kecil, dan proyek sampingan yang saya kerjakan di luar jam kerja.',
+      p3_link: 'Lihat GitHub', proj_pro: 'Proyek profesional',
+      edu_label: 'Edukasi', edu_title: 'Latar belakang pendidikan.',
+      edu1_note: 'Sekolah menengah atas.',
+      edu2_meta: 'Pendidikan tinggi',
+      edu2_note: 'Tidak diselesaikan — ilmu tetap berjalan lewat praktik dan proyek nyata.',
+      contact_label: 'Kontak',
+      contact_title: 'Punya peran atau proyek yang cocok? Mari bicara.',
+      contact_sub: 'Terbuka untuk diskusi seputar Technical Operations, Project Management, maupun Scrum Mastery. Balasan biasanya dalam 1×24 jam.',
+      contact_copy: 'Salin email', contact_cta: 'Kirim Email',
+      c_email: 'Email', c_phone: 'Telepon', c_loc: 'Lokasi', c_loc_v: 'Depok, Jawa Barat, Indonesia',
+      footer_note: 'Dibangun dengan HTML, CSS & JavaScript murni.', footer_top: 'Ke atas',
+      back_top: 'Kembali ke atas',
+      contact_copied: 'Email tersalin!',
+      contact_copyfail: 'Gagal menyalin — silakan salin manual.',
+      meta_desc: 'Portfolio M. Bayu Adi Putra — Technical Operations, Project Manager, dan Scrum Master dengan 16+ tahun pengalaman di industri teknologi.'
+    },
+    en: {
+      skip: 'Skip to content',
+      nav_home: 'Home', nav_about: 'About', nav_skills: 'Skills',
+      nav_exp: 'Experience', nav_projects: 'Projects', nav_edu: 'Education', nav_contact: 'Contact',
+      hero_status: 'Open to opportunities',
+      hero_greet: "Hi, I'm",
+      hero_desc: 'A Technical Operations specialist who also works as a Project Manager and Scrum Master. More than 16 years keeping systems running and products shipping.',
+      hero_cta1: 'Download CV', hero_cta2: "Let's Connect",
+      stat1: 'Years experience', stat2: 'Companies', stat3: 'Core roles',
+      hero_roles: ['Technical Operations', 'Project Manager', 'Scrum Master', 'Application Support'],
+      photo_alt: 'Photo of M. Bayu Adi Putra',
+      about_label: 'About',
+      about_title: 'An operations professional with a product mindset.',
+      about_p1: 'I work at the intersection of operations and product. For more than 16 years I have handled application support, technical operations, and led development teams as a Project Manager and Scrum Master.',
+      about_p2: 'My day-to-day is keeping POS systems, mobile apps, e-commerce, and CMS portals running — from reading logs in Kibana and managing containers on Kubernetes, to making sure sprints land on time. I learn fast and believe clear team communication is what makes delivery clean.',
+      chip1: 'Fast learner', chip2: 'Software & hardware enthusiast', chip3: 'Deadline-driven',
+      chip4: 'Easy to socialize', chip5: 'Team player',
+      profile_role: 'Technical Operations · PM',
+      row_loc: 'Location', row_loc_v: 'Depok, West Java, Indonesia',
+      row_mail: 'Email', row_phone: 'Phone', row_status: 'Status',
+      row_status_v: 'Open to opportunities', row_lang: 'Languages', row_lang_v: 'Indonesian · English',
+      skills_label: 'Skills',
+      skills_title: 'Tools and technologies I work with every day.',
+      skills_sub: 'From server command lines to sprint backlogs — these are the areas I touch most.',
+      cat1_t: 'Systems & Infrastructure', cat1_d: 'Keeping servers, containers, and logs healthy and readable.',
+      cat2_t: 'Web Development', cat2_d: 'Building and maintaining interfaces and backend services.',
+      cat3_t: 'Databases', cat3_d: 'Queries, migrations, and operational data troubleshooting.',
+      cat4_t: 'Tools & Domain', cat4_d: 'Daily tools and the product domains I know.',
+      exp_label: 'Experience',
+      exp_title: 'A career path from support to leading projects.',
+      exp_sub: "Sixteen years of learning in the field: handling incidents, keeping services alive, then setting the team's rhythm.",
+      badge_now: 'Present',
+      e1_date: 'Nov 2023 — Present', e1_role: 'Technical Operation',
+      e1_b1: 'Keep the POS system available across all stores, including monitoring, troubleshooting, and incident escalation.',
+      e1_b2: 'Coordinate with product, vendor, and field teams so daily operations run without disruption.',
+      e1_b3: 'Analyze logs and root causes to speed up recurring issue resolution.',
+      e2_date: 'Aug 2021 — Oct 2023', e2_role: 'Project Manager / Scrum Master',
+      e2_b1: 'Facilitated sprint planning, daily stand-ups, sprint reviews, and retrospectives for the development team.',
+      e2_b2: 'Managed the backlog, feature priorities, and communication with product stakeholders.',
+      e2_b3: 'Protected release timelines and quality to match business needs.',
+      e2_extra: 'Technical Operation — PT Meteor Inovasi Digital', lab_also: 'Also',
+      e3_date: 'Nov 2018 — Aug 2021', e3_role: 'Technical Operation',
+      e3_b1: 'Handled daily technical operations and production support for digital services.',
+      e3_b2: 'Monitored system performance, ran deployments, and coordinated cross-team incident response.',
+      lab_assign: 'Assigned to',
+      e4_date: 'Jun 2013 — Sep 2018', e4_role: 'Application Support',
+      e4_b1: 'Provided application support for internal users and clients.',
+      e4_b2: 'Handled tickets, troubleshooting, installation, and solution documentation.',
+      e5_date: 'Mar 2010 — Jun 2013', e5_role: 'Game Master',
+      e5_b1: 'Managed the player community, in-game events, and moderation.',
+      e5_b2: 'Acted as the bridge between players and the server technical team.',
+      proj_label: 'Projects',
+      proj_title: 'Systems I help keep alive and evolving.',
+      proj_sub: 'Most of my work happens behind the scenes — keeping retail and operational platforms running.',
+      p1_d: 'Retail and e-commerce platform: technical operations, release monitoring, and cross-team coordination during the V3 to V4 transition.',
+      p2_d: 'POS and store operations: daily support, troubleshooting, incident escalation, and log analysis.',
+      p3_d: 'A collection of code experiments, small utilities, and side projects I build outside working hours.',
+      p3_link: 'View GitHub', proj_pro: 'Professional project',
+      edu_label: 'Education', edu_title: 'Educational background.',
+      edu1_note: 'Senior high school.',
+      edu2_meta: 'Higher education',
+      edu2_note: 'Not completed — the learning continued through practice and real projects.',
+      contact_label: 'Contact',
+      contact_title: "Got a role or project that fits? Let's talk.",
+      contact_sub: 'Open to conversations about Technical Operations, Project Management, or Scrum Mastery. Replies usually within 24 hours.',
+      contact_copy: 'Copy email', contact_cta: 'Send Email',
+      c_email: 'Email', c_phone: 'Phone', c_loc: 'Location', c_loc_v: 'Depok, West Java, Indonesia',
+      footer_note: 'Built with plain HTML, CSS & JavaScript.', footer_top: 'Back to top',
+      back_top: 'Back to top',
+      contact_copied: 'Email copied!',
+      contact_copyfail: 'Could not copy — please copy manually.',
+      meta_desc: 'Portfolio of M. Bayu Adi Putra — Technical Operations, Project Manager, and Scrum Master with 16+ years in the tech industry.'
+    }
+  };
+  var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(pointer: fine)').matches;
+  var state = { lang: 'id' };
+
+  function $(sel, root) { return (root || document).querySelector(sel); }
+  function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+
+  /* ==================== LANGUAGE ==================== */
+  function applyLang(lang) {
+    var dict = I18N[lang] || I18N.id;
+    state.lang = I18N[lang] ? lang : 'id';
+    document.documentElement.lang = state.lang;
+    document.documentElement.setAttribute('data-lang', state.lang);
+
+    $$('[data-i18n]').forEach(function (el) {
+      var v = dict[el.getAttribute('data-i18n')];
+      if (typeof v === 'string') el.textContent = v;
+    });
+    $$('[data-i18n-alt]').forEach(function (el) {
+      var v = dict[el.getAttribute('data-i18n-alt')];
+      if (typeof v === 'string') el.setAttribute('alt', v);
+    });
+    $$('[data-i18n-aria]').forEach(function (el) {
+      var v = dict[el.getAttribute('data-i18n-aria')];
+      if (typeof v === 'string') el.setAttribute('aria-label', v);
+    });
+    $$('[data-lang-btn]').forEach(function (btn) {
+      var on = btn.getAttribute('data-lang-btn') === state.lang;
+      btn.classList.toggle('active', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+
+    var md = document.querySelector('meta[name="description"]');
+    if (md) md.setAttribute('content', dict.meta_desc);
+
+    try { localStorage.setItem('bayu-lang', state.lang); } catch (e) {}
+    startTyping();
+  }
+
+  /* ==================== TYPING ==================== */
+  var typeTimer = null, typeGen = 0;
+
+  function startTyping() {
+    var el = $('#typed');
+    if (!el) return;
+    clearTimeout(typeTimer);
+    typeGen++;
+    var gen = typeGen;
+    var roles = I18N[state.lang].hero_roles;
+
+    if (REDUCED) { el.textContent = roles[0]; return; }
+
+    var i = 0, j = 0, deleting = false;
+    function step() {
+      if (gen !== typeGen) return;
+      var word = roles[i];
+      el.textContent = word.slice(0, j);
+      var delay = 58 + Math.random() * 46;
+      if (!deleting) {
+        if (j < word.length) { j++; }
+        else { deleting = true; delay = 1600; }
+      } else {
+        if (j > 0) { j--; delay = 26; }
+        else { deleting = false; i = (i + 1) % roles.length; delay = 220; }
+      }
+      typeTimer = setTimeout(step, delay);
+    }
+    step();
+  }
+
+  /* ==================== PARTICLES ==================== */
+  function initParticles() {
+    var canvas = $('#bg');
+    if (!canvas || !canvas.getContext) return;
+    var ctx = canvas.getContext('2d');
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w = 0, h = 0, pts = [], raf = null;
+    var COLORS = ['45,226,242', '124,92,255', '124,240,255', '232,121,249'];
+
+    function size() {
+      w = window.innerWidth; h = window.innerHeight;
+      canvas.width = Math.floor(w * dpr);
+      canvas.height = Math.floor(h * dpr);
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var n = w < 600 ? 20 : (w < 1024 ? 34 : 54);
+      pts = [];
+      for (var k = 0; k < n; k++) {
+        pts.push({
+          x: Math.random() * w, y: Math.random() * h,
+          vx: (Math.random() - .5) * .22, vy: (Math.random() - .5) * .22,
+          r: Math.random() * 1.3 + .5,
+          c: COLORS[Math.floor(Math.random() * COLORS.length)]
+        });
+      }
+    }
+
+    function frame() {
+      ctx.clearRect(0, 0, w, h);
+      var i, j, p, a, b, dx, dy, d2;
+      for (i = 0; i < pts.length; i++) {
+        p = pts[i];
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < -12) p.x = w + 12;
+        if (p.x > w + 12) p.x = -12;
+        if (p.y < -12) p.y = h + 12;
+        if (p.y > h + 12) p.y = -12;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(' + p.c + ',.55)';
+        ctx.fill();
+      }
+      if (pts.length <= 40) {
+        for (i = 0; i < pts.length; i++) {
+          for (j = i + 1; j < pts.length; j++) {
+            a = pts[i]; b = pts[j];
+            dx = a.x - b.x; dy = a.y - b.y; d2 = dx * dx + dy * dy;
+            if (d2 < 15000) {
+              ctx.strokeStyle = 'rgba(124,240,255,' + ((1 - d2 / 15000) * .15).toFixed(3) + ')';
+              ctx.lineWidth = 1;
+              ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+            }
+          }
+        }
+      }
+      raf = requestAnimationFrame(frame);
+    }
+
+    function start() { if (!raf) raf = requestAnimationFrame(frame); }
+    function stop() { if (raf) { cancelAnimationFrame(raf); raf = null; } }
+
+    size();
+    if (REDUCED) { frame(); stop(); } else { start(); }
+
+    var rt;
+    window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(size, 220); });
+    document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+  }
+
+  /* ==================== CURSOR GLOW ==================== */
+  function initGlow() {
+    if (!FINE || REDUCED) return;
+    var g = $('#glow');
+    if (!g) return;
+    var tx = window.innerWidth * .5, ty = window.innerHeight * .3;
+    var cx = tx, cy = ty, raf = null;
+
+    function loop() {
+      cx += (tx - cx) * .14;
+      cy += (ty - cy) * .14;
+      g.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
+      if (Math.abs(tx - cx) > .4 || Math.abs(ty - cy) > .4) {
+        raf = requestAnimationFrame(loop);
+      } else { raf = null; }
+    }
+
+    window.addEventListener('pointermove', function (e) {
+      tx = e.clientX; ty = e.clientY;
+      g.style.opacity = '1';
+      if (!raf) raf = requestAnimationFrame(loop);
+    }, { passive: true });
+
+    window.addEventListener('pointerleave', function () { g.style.opacity = '0'; });
+  }
+
+  /* ==================== SCROLL ==================== */
+  function initScroll() {
+    var bar = $('#progressBar'), nav = $('#nav'), top = $('#toTop');
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var st = window.pageYOffset || document.documentElement.scrollTop || 0;
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var ratio = max > 0 ? Math.min(st / max, 1) : 0;
+      if (bar) bar.style.transform = 'scaleX(' + ratio + ')';
+      if (nav) nav.classList.toggle('scrolled', st > 24);
+      if (top) top.classList.toggle('show', st > 620);
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+
+    update();
+    if (top) top.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: REDUCED ? 'auto' : 'smooth' });
+    });
+  }
+
+  /* ==================== MENU ==================== */
+  function initMenu() {
+    var burger = $('#burger'), sheet = $('#sheet');
+    if (!burger || !sheet) return;
+
+    function set(open) {
+      document.documentElement.classList.toggle('menu-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+      sheet.setAttribute('aria-hidden', open ? 'false' : 'true');
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    burger.addEventListener('click', function () {
+      set(!document.documentElement.classList.contains('menu-open'));
+    });
+    $$('#sheet a').forEach(function (a) {
+      a.addEventListener('click', function () { set(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') set(false);
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1080) set(false);
+    });
+  }
+
+  /* ==================== SCROLLSPY ==================== */
+  function initSpy() {
+    if (!('IntersectionObserver' in window)) return;
+    var links = $$('.nav-links a');
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href');
+      if (id && id.charAt(0) === '#') map[id.slice(1)] = a;
+    });
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var a = map[en.target.id];
+        if (!a) return;
+        links.forEach(function (l) { l.classList.remove('active'); });
+        a.classList.add('active');
+      });
+    }, { rootMargin: '-46% 0px -50% 0px', threshold: 0 });
+    $$('main section[id]').forEach(function (s) { obs.observe(s); });
+  }
+
+  /* ==================== REVEAL ==================== */
+  function initReveal() {
+    var els = $$('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add('in');
+          obs.unobserve(en.target);
+        }
+      });
+    }, { threshold: .1, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function (el) { obs.observe(el); });
+  }
+
+  /* ==================== TILT ==================== */
+  function initTilt() {
+    if (!FINE || REDUCED) return;
+    $$('.proj-card, .skill-card').forEach(function (card) {
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - .5;
+        var py = (e.clientY - r.top) / r.height - .5;
+        card.style.transform = 'perspective(900px) rotateX(' + (-py * 3.2).toFixed(2) +
+          'deg) rotateY(' + (px * 3.2).toFixed(2) + 'deg) translateY(-4px)';
+      });
+      card.addEventListener('pointerleave', function () { card.style.transform = ''; });
+    });
+  }
+
+  /* ==================== COPY + TOAST ==================== */
+  var toastTimer = null;
+
+  function toast(msg) {
+    var t = $('#toast');
+    if (!t) return;
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2300);
+  }
+
+  function copyEmail() {
+    function fallback() {
+      var ok = false;
+      var ta = document.createElement('textarea');
+      ta.value = EMAIL;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      document.body.removeChild(ta);
+      done(ok);
+    }
+    function done(ok) {
+      var d = I18N[state.lang];
+      if (!ok) { toast(d.contact_copyfail); return; }
+      toast(d.contact_copied);
+      var lb = $('#copyLabel');
+      if (lb) {
+        lb.textContent = d.contact_copied;
+        setTimeout(function () { lb.textContent = I18N[state.lang].contact_copy; }, 2200);
+      }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(EMAIL).then(function () { done(true); }, fallback);
+    } else {
+      fallback();
+    }
+  }
+
+  /* ==================== INIT ==================== */
+  function init() {
+    var saved = null;
+    try { saved = localStorage.getItem('bayu-lang'); } catch (e) {}
+    applyLang(saved === 'en' || saved === 'id' ? saved : 'id');
+
+    $$('[data-lang-btn]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        applyLang(btn.getAttribute('data-lang-btn'));
+      });
+    });
+
+    var cb = $('#copyBtn');
+    if (cb) cb.addEventListener('click', copyEmail);
+
+    var y = $('#year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    initScroll();
+    initSpy();
+    initReveal();
+    initTilt();
+    initMenu();
+    initGlow();
+    initParticles();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>
